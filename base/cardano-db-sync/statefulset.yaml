@@ -178,6 +178,14 @@ spec:
         configMap:
           name: cardano-db-sync-configmap
 
+      nodeSelector:
+        cloud.google.com/gke-nodepool: genius-yield-dev-gke-cardano-node-pool
+      tolerations:
+        - key: gy.dedicated
+          operator: Equal
+          value: cardano-nodes
+          effect: NoSchedule
+
   volumeClaimTemplates:
   - metadata:
       name: dbsync-statedir
@@ -185,4 +193,4 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 4Gi
+          storage: 40Gi

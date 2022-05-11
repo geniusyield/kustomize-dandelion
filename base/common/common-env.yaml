@@ -9,7 +9,7 @@ data:
   POSTGRES_PORT: "5432"
   POSTGRES_DB: cexplorer
   POSTGRES_USER: postgres
-  POSTGRES_USER_RO:  dandelion_ro
+  POSTGRES_USER_RO:  geniusyield_ro
   chisel-auth-file: |
     {
       "admin:CHANGEME": [""]

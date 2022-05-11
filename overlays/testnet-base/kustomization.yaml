@@ -1,10 +1,8 @@
 commonLabels:
-  environment: production
+  environment: dev
   cardano_network: testnet
   cardano_node_type: haskell
-  project_name: dandelion
-commonAnnotations:
-  note: free-apis!
+  project_name: geniusyield
 
 bases:
 - ../../base/common

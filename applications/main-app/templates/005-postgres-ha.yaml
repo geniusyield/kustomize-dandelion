@@ -46,7 +46,7 @@ spec:
           {{- end }}
         pgpool:
           customUsers:
-            usernames: 'dandelion_ro'
+            usernames: 'geniusyield_ro'
             passwords: {{ .Values.dandelion.db.roPassword | default "CHANGEME" }}
         metrics:
           enabled: true

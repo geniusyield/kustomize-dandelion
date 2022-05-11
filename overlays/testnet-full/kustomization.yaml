@@ -1,10 +1,8 @@
 commonLabels:
-  environment: production
+  environment: dev
   cardano_network: testnet
   cardano_node_type: haskell
-  project_name: dandelion
-commonAnnotations:
-  note: free-apis!
+  project_name: geniusyield
 
 bases:
 - ../testnet-base
@@ -12,13 +10,13 @@ bases:
 - ../../base/cardano-db-sync
 - ../../base/cardano-graphql
 - ../../base/cardano-hasura
-- ../../base/cardano-rosetta
-- ../../base/cardano-explorer-api
-- ../../base/cardano-submit-api
+# - ../../base/cardano-rosetta
+# - ../../base/cardano-explorer-api
+# - ../../base/cardano-submit-api
 #- ../../base/metrics-exporter
-- ../../base/ogmios
+# - ../../base/ogmios
 - ../../base/postgrest
-- ../../base/koios
+# - ../../base/koios
 
 resources:
 - resources/ingress.yaml

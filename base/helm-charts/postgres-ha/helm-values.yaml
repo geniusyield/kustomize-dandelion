@@ -600,7 +600,7 @@ pgpool:
   ## will be appended to the "pgpool_passwd" file
   ##
   customUsers:
-    usernames: "dandelion_ro"
+    usernames: "geniusyield_ro"
     passwords: "r4nd0m1z3dp0st"
   ## @param pgpool.usernames Comma or semicolon separated list of postgres usernames
   ## e.g:
@@ -718,16 +718,17 @@ pgpool:
   ## @param pgpool.nodeSelector Node labels for Pgpool pods assignment
   ## ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector: {}
+  nodeSelector: {"cloud.google.com/gke-nodepool", "genius-yield-dev-gke-cardano-node-pool"}
   ## @param pgpool.tolerations Tolerations for Pgpool pods assignment
   ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
   ##
-  tolerations: []
+  tolerations: [{"key": "gy.dedicated", "operator": "Equal", "value": "cardano-nodes", "effect": "NoSchedule"}]
   ## K8s Security Context
   ## https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
   ## @param pgpool.securityContext.enabled Enable security context for Pgpool
   ## @param pgpool.securityContext.fsGroup Group ID for the Pgpool filesystem
   ##
+
   securityContext:
     enabled: true
     fsGroup: 1001
